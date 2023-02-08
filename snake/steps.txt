@@ -1,0 +1,10 @@
+1 - get turtle on screen //DONE
+2 - make turtle change directions  //DONE
+3 - make turtle move that direction
+4 - add another turtle / food
+5 - 
+6 -
+7 - 
+8 - 
+9 - 
+10 - 
