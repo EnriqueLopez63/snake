@@ -1,47 +1,63 @@
 import turtle
 from random import *
 from turtle import *    
-snk0 = turtle.Turtle()
+
+snk0 =Turtle()
 
 def forward():
-    snk0.setheading(0)
-    snk0.forward(10)
-
-def left():
-    snk0.setheading(270)
-    snk0.forward(10)
-
-def right():
     snk0.setheading(90)
     snk0.forward(10)
+    direction = "up"
+    if direction != "down":
+        bg.onkey(up , 'Up')
 
-def down():
+def left():
     snk0.setheading(180)
     snk0.forward(10)
+    direction = "left"
+    if direction != "right":
+        bg.onkey(left , 'Left')
+def right():
+    snk0.setheading(0)
+    snk0.forward(10)
+    direction = "right"
+    if direction != "left":
+        bg.onkey(right , 'Right')
+
+
+def Down():
+    snk0.setheading(270)
+    snk0.forward(10)
+    direction = "down"
+    if direction != "up":
+        bg.onkey(Down , 'Down')
+   
 
 
 
-
-
-
-# snk0.listen()
 while True == True:
+
     bg = turtle.Screen()
     bg.setup(1000,1000)
     bg.bgcolor("black")
-
-########## back ground map ##############
-
+    ########## back ground map ##############
 
     snk0.shape("turtle")
     snk0.turtlesize(.5,.5)
     snk0.begin_fill()
     snk0.color('lime')
-######### snake cusotmization ########
+    ######### snake cusotmization ########
 
-    # snk0.onkey(forward , 'Up')
-    # snk0.onkey(left , 'Left')
-    # snk0.mainloop()
+
+
+
+    
+    bg.onkey(down , 'Down')
+    turtle.listen()
+    turtle.mainloop()
+
+
+
 
 
 
